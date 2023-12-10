@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password"name="" id="pass">
+    <input type="checkbox" name="" id="btncheck" value="0"> <label for="">Show password</label>
+</body>
+<script>
+    const check=document.getElementById('btncheck');
+    const txt=document.getElementById('pass');
+    document.getElementById('btncheck').addEventListener('click',function(){
+        if(check.value==0){
+            txt.type='text';
+            check.value=1;
+        }
+        else{
+            txt.type='password';
+            check.value=0;
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu{
+        width:80%;
+        height: 70px;
+        background: red;
+        margin: auto;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li a{
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px;
+        text-transform: uppercase;
+    }
+    .sub-menu{
+        width: 100px;
+        background:green;
+        position: absolute;
+        display: none;
+    }
+    .sub-menu ul li{
+        float: none;
+    }
+    .menu ul li:hover .sub-menu{
+        display: block;
+    }
+</style>
+<body>
+    <div class="menu">
+        <!-- <ul>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        c</li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul> -->
+    </div>
+</body>
+<script>
+    var obj=['red','green','blue','yellow'];
+    var item='';
+    for(var i=0 ; i<obj.length;i++){
+        item=item+"<li><a href=''>"+obj[i]+"</a></li>";
+    }
+    document.querySelector('.menu').innerHTML="<ul>"+item+"</ul>"
+</script>
+</html>

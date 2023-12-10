@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        height: 70px;
+        background: red;
+        margin: auto;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li a{
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 20px;
+    }
+</style>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">home</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var obj=['red','green','blue','yellow'];
+    var item='';
+    for(var i=0 ; i<obj.length;i++){
+        item=item+"<li><a href=''>"+object[i]+"</a></li>";
+    }
+    document.querySelector('.menu').innerHTML="<ul>"+item+"</ul>"
+</script>
+</html>

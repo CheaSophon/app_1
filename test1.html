@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <input type="text" value="0" id="txtnumber">
+    <input type="text" value="0" id="txtnumber1">
+    <input type="text" value="0" id="txtnumber2">
+    <input type="button" value="Click" onclick="test()">
+</body>
+<script>
+    function test(){
+        var num1=document.getElementById('txtnumber').value;
+        var num2=document.getElementById('txtnumber1').value;
+        var total=document.getElementById('txtnumber2');
+        total.value=parseInt(num1)+parseInt(num2);
+    }
+</script>
+</html>

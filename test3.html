@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        overflow: hidden;
+        background: red;
+        margin: auto;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li a{
+        display: block;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+       padding: 20px;
+    }
+    .sub-menu{
+        width: 100px;
+        position: absolute;
+        background: green;
+        display:none;
+    }
+    .menu ul li:hover .sub-menu{
+        display: block;
+    }
+    .sub-menu ul li{
+        float: none;
+    }
+</style>
+<body>
+    <div class="menu">
+        <!-- <ul>
+            <li>
+                <a href="">Home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">About</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">Product</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                        <li>
+                            <a href="">HTML1</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul> -->
+    </div>
+</body>
+<script>
+    var object=[
+       {
+            'menu':"HTML",
+            'link':'https://www.w3schools.com/html/default.asp',
+            'sub-menu':['HTML1','HTML2','HTML3']
+
+       },
+       {
+            'menu':"CSS",
+            'link':'https://www.w3schools.com/html/default.asp',
+            'sub-menu':['CSS1','CSS2','CSS3']
+
+       },
+       {
+            'menu':"JAVA",
+            'link':'https://www.w3schools.com/html/default.asp',
+            'sub-menu':['JAVA1','JAVA2','JAVA3']
+       }
+    ]
+    var item='';
+    for(var i =0; i<object.length;i++){
+        item = item + "<li><a href='"+object[i]['link']+"'>"+object[i]['menu']+"</a></li>";
+
+    var submenu=object[i]['sub-menu'];
+    var sub='';
+    for(var j=0;j<submenu.length;j++){
+        sub=sub+`
+                <li>
+                    <a href="">${submenu[j]}</a>
+                </li>
+        `;
+    }
+
+    item =item +`
+            <li>
+                <a href="">${object[i]['menu']}</a>
+                <div class="sub-menu">
+                    <ul>
+                       ${sub}
+                    </ul>
+                </div>
+            </li>
+    `;
+}
+    document.querySelector('.menu').innerHTML="<ul>"+item+"</ul>"
+</script>
+</html>

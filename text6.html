@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array obj</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        height: 60px;
+        background: red;
+        margin: auto;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float:left;
+    }
+    .menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+    }
+    .sub-menu{
+        width: 80px;
+        /* overflow: hidden; */
+        background: green;
+        position: absolute;
+        display: none;
+    }
+    .sub-menu ul li{
+        float: none;
+    }
+    .menu ul li:hover .sub-menu{
+        display: block;
+    }
+</style>
+<body>
+    <div class="menu">
+        <!-- <ul>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">home</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                        <li>
+                            <a href="">HTMl</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul> -->
+    </div>
+</body>
+<script>
+    var object=[
+    {'menu':"HTML",'link':'https://www.w3schools.com/html/','sub-menu':['HTMl1','HTMl2','HTMl3']},
+    {'menu':"CSS",'link':'https://www.w3schools.com/html/','sub-menu':['HTMl1','HTMl2','HTMl3']},
+    {'menu':"JAVA",'link':'https://www.w3schools.com/html/','sub-menu':['HTMl1','HTMl2','HTMl3']},
+    {'menu':"PHP",'link':'https://www.w3schools.com/html/','sub-menu':['HTMl1','HTMl2','HTMl3']}
+ // "name"=is key 'phon'=value
+    ]
+    var item='';
+    for(var i=0;i<object.length;i++){
+        var submenu=object[i]['sub-menu'];
+        var sub='';
+        for(var j=0;j<submenu.length;j++){
+            sub=sub+`
+                	    <li>
+                            <a href="">${submenu[j]}</a>
+                        </li>
+            `;
+            item=item+`
+            <li>
+                <a href="">HOME</a>
+                <div class="sub-menu">
+                    <ul>
+                      ${sub}
+                    </ul>
+                </div>
+            </li>
+
+            `;
+
+        }
+    }
+    document.querySelector('.menu').innerHTML="<ul>"+item+"</ul>"
+</script>
+</html>

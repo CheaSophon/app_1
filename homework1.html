@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .container .content{
+        width: 50%;
+        height: 500px;
+        background: red;
+        padding: 10px;
+        margin: auto;
+    }
+    .content .big-img{
+        width: 100%;
+        height: 69%;
+        background: rgb(204, 204, 211);
+    }
+    .big-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .content .small-img{
+        width: 100%;
+        margin-top: 1%;
+        height: 30%;
+        /* background: blueviolet; */
+    }
+    .small-img .box1{
+        width: 24%;
+        height: 100%;
+        background: rgb(181, 177, 177);
+        margin-left: 1%;
+        float: left;
+    }
+    .box1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .small-img .box1:first-child{
+        margin-left: 0px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="big-img">
+                <img src="https://m.media-amazon.com/images/I/41X8QT-UyFL._AC_UY1100_.jpg" alt=""  id="big-img">
+            </div>
+            <div class="small-img">
+                <div class="box1">
+                    <img src="https://i.pinimg.com/736x/34/51/06/34510664f63a1a1b554646f4e1e784cc.jpg" alt="" onclick="IMG1()">
+                </div>
+                <div class="box1">
+                    <img src="https://image.made-in-china.com/202f0j00DZiGWqNFCRkQ/Women-Temperature-Measurement-Smart-Sports-Watch-Wach.webp" alt="" onclick="IMG2()">
+                </div>
+                <div class="box1">
+                    <img src="https://i.pinimg.com/736x/da/41/12/da41124dd6ec610f5080f9f2a37cab99.jpg" alt="" onclick="IMG3()">
+                </div>
+                <div class="box1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd4dfGJpjSQx_iUcinl8Y_ImUX5bOBdgGo2xwamww-0VAgRz0rja_Ti1VvNAnTHj_lhgc&usqp=CAU" alt="" onclick="IMG4()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // var item=[
+    //     {   'big-img':"https://m.media-amazon.com/images/I/41X8QT-UyFL._AC_UY1100_.jpg",
+    //             "small-img":[   'https://i.pinimg.com/736x/34/51/06/34510664f63a1a1b554646f4e1e784cc.jpg',
+    //                             'https://image.made-in-china.com/202f0j00DZiGWqNFCRkQ/Women-Temperature-Measurement-Smart-Sports-Watch-Wach.webp',
+    //                             'https://i.pinimg.com/736x/da/41/12/da41124dd6ec610f5080f9f2a37cab99.jpg',
+    //                             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd4dfGJpjSQx_iUcinl8Y_ImUX5bOBdgGo2xwamww-0VAgRz0rja_Ti1VvNAnTHj_lhgc&usqp=CAU'
+    //                         ]
+    //     }
+    // ]
+    function IMG1(){
+        document.getElementById('big-img').setAttribute('src','https://i.pinimg.com/736x/34/51/06/34510664f63a1a1b554646f4e1e784cc.jpg');
+    }
+    function IMG2(){
+        document.getElementById('big-img').setAttribute('src','https://image.made-in-china.com/202f0j00DZiGWqNFCRkQ/Women-Temperature-Measurement-Smart-Sports-Watch-Wach.webp');
+    }
+    function IMG3(){
+        document.getElementById('big-img').setAttribute('src','https://i.pinimg.com/736x/da/41/12/da41124dd6ec610f5080f9f2a37cab99.jpg');
+    }
+    function IMG4(){
+        document.getElementById('big-img').setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd4dfGJpjSQx_iUcinl8Y_ImUX5bOBdgGo2xwamww-0VAgRz0rja_Ti1VvNAnTHj_lhgc&usqp=CAU');
+    }
+</script>
+</html>
